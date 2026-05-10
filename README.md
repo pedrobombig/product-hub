@@ -39,7 +39,13 @@ A aplicação estará disponível em `http://localhost:8080`. O worker SQS sobe 
 # 3. Suba os containers
 docker compose up -d --build
 
-# 4. Rode as migrations
+# 4. Instale as dependências
+docker compose exec app composer install
+
+# 5. Gere a chave da aplicação
+docker compose exec app php artisan key:generate
+
+# 6. Rode as migrations
 docker compose exec app php artisan migrate
 ```
 
