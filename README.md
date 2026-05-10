@@ -18,7 +18,7 @@ HUB para receber e processar jobs de atualização de produtos via Amazon SQS.
 
 ```bash
 # 1. Clone o repositório
-git clone <repo>
+git clone https://github.com/pedrobombig/product-hub.git
 cd product-hub
 
 # 2. Configure o ambiente
@@ -37,7 +37,6 @@ A aplicação estará disponível em `http://localhost:8080`. O worker SQS sobe 
 
 ```bash
 # 3. Suba os containers
-
 docker compose up -d --build
 
 # 4. Rode as migrations
